@@ -50,3 +50,11 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* Sadece fontu indirmek ve kutu modelini düzeltmek için */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&family=Quattrocento:wght@400;700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&family=Satisfy&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
