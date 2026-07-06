@@ -1,4 +1,4 @@
-# 🍕 Teknolojik Yemekler — E2E Testli & Dinamik Geliştiriciler için Yemek Sipariş Platformu
+# 🍕 Teknolojik Yemekler —  Yaızlım Geliştiriciler için Yemek Sipariş Platformu ( E2E Testli & Dinamik )
 
 **Hey Sen**, bilgisayar başında karnı acıkan yazılım geliştirici! **Karnın mı Acıktı?** O zamannn ne duruyorsun? Pizza siparişini bu websitesinden verebilirsin!  
 **Teknolojik Yemekler**, modern frontend mimarisi prensipleriyle tasarlanmış, **en dar telefon ekranından masaüstüne kadar kusursuz responsive deneyim sunan**, kullanıcı davranışlarına anlık tepki veren, uçtan uca test edilmiş (**E2E Cypress**) ve yüksek performanslı bir **React Single Page Application (SPA)** projesidir.
