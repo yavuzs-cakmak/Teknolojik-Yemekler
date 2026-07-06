@@ -45,7 +45,8 @@ graph TB
     I -- true --> C[Enable Submit]
     
     B --> Z((Submit))
-    C --> Z ```
+    C --> Z
+```
 
 ---
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
