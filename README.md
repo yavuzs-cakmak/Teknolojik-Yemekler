@@ -1,4 +1,5 @@
-# 🍕 Teknolojik Yemekler —  Yaızlım Geliştiriciler için Yemek Sipariş Platformu ( E2E Testli & Dinamik )
+#TR
+# 🍕 Teknolojik Yemekler —  Yazılım Geliştiriciler için Yemek Sipariş Platformu ( E2E Testli & Dinamik )
 
 **Hey Sen**, bilgisayar başında karnı acıkan yazılım geliştirici! **Karnın mı Acıktı?** O zamannn ne duruyorsun? Pizza siparişini bu websitesinden verebilirsin!  
 **Teknolojik Yemekler**, modern frontend mimarisi prensipleriyle tasarlanmış, **en dar telefon ekranından masaüstüne kadar kusursuz responsive deneyim sunan**, kullanıcı davranışlarına anlık tepki veren, uçtan uca test edilmiş (**E2E Cypress**) ve yüksek performanslı bir **React Single Page Application (SPA)** projesidir.
@@ -146,4 +147,157 @@ cd teknolojik-yemekler
 npm install
 
 # 4. Geliştirme sunucusunu başlatın
+npm run dev
+
+
+---
+
+#EN
+
+# 🍕 Teknolojik Yemekler — E2E Tested & Dynamic Food Ordering Platform for Software Developers
+
+**Hey You**, the software developer whose stomach is rumbling right in front of the computer! **Are you hungry?** Then what are you waiting for? You can order your pizza right from this website!  
+
+**Teknolojik Yemekler** is a high-performance **React Single Page Application (SPA)** project, designed with modern frontend architecture principles, providing a **flawless responsive experience from the narrowest phone screen to the desktop**, reacting instantly to user behaviors, and completely tested end-to-end (**E2E Cypress**).
+
+This project does not only offer an e-commerce interface; it embodies deep frontend engineering, ranging from form state management (**State Management**) and asynchronous API communication to **Edge-Case** (boundary state) protections and preventing **React 18 Strict Mode** race conditions (`Race Conditions`).
+
+---
+
+## 🌐 Live Demo & Automated Test Reports
+
+* 🚀 **Live Application (Live Demo):** `[ADD VERCEL LINK HERE]`
+* 🧪 **Test Coverage:** 100% End-to-End Cypress Scenarios Successful (Form, Navigation, Network Interception & Price Engine)
+
+---
+
+## Representative Data Flow Diagrams
+
+### Routes
+
+```mermaid
+graph LR
+    A((Homepage)) --> B([Order Now Button])
+    B --> C[Order Form]
+    C --> Z((Order Confirmation))
+```
+### Order Form Data Flow and Validation Engine
+```mermaid
+graph TB
+    A((User Event)) -- e.target.data --> V{does Field has errors?}
+    A -- e.target.data --> G[Update Form State]
+    G --> F[(Form Data State)]
+    
+    V -- has error --> H[Add Error]
+    V -- no error --> S[Remove Error]
+    
+    H --> E[(Form Errors State)]
+    S --> E
+    
+    F ---> I
+    E --> I{is Form valid?}
+    
+    I -- false --> B[Disable Submit]
+    I -- true --> C[Enable Submit]
+    
+    B --> Z((Submit))
+    C --> Z
+```
+---
+
+## 📱 100% Responsive Architecture For Every Screen and Phone Size
+
+The application is designed targeting pixel perfection at every breakpoint, not just for standard devices but ranging from the narrowest mobile devices (e.g., 320px iPhone SE) to wide-screen tablets and desktop monitors.
+
+### Engineering Solutions Applied in Mobile Design:
+* **📐 Fluid Typography and Flexible Sizing:** Implemented using `clamp()` and `vw/vh` units.
+* **🔀 Dynamic Grid and Flexbox Transformations:** Seamless structure shifts across viewport sizes.
+* **🎨 Responsive Background Layers:** Utilizes gradient masking techniques for optimal visual contrast.
+
+---
+
+## 🏗️ Architectural Philosophy and User Experience (Deep Dive)
+
+Every step taken by a user on the application triggers specific React hooks, validation engines, and asynchronous HTTP processes in the background. Here is the working mechanism of the system step-by-step:
+
+### 1. Welcome and Dynamic Routing (Homepage)
+* **What Does the User Experience?** The user encounters a high-resolution and fully mobile-responsive welcome screen. They transition to the order engine with a single click without refreshing the page.
+* **Which Functions Run in the Background?**
+  * **`useHistory` Hook & SPA Routing:** When the "ACIKTIM" button is clicked, the `handleSiparisGecis` method is triggered. The browser's default page refresh behavior is prevented using `event.preventDefault()`, and thanks to the `history.push("/PizzaSiparisi")` method, the page is rendered over the React Virtual DOM in seconds (without any loading time).
+  * **Dynamic CSS (`styled-components`):** The visual design operates with fully isolated component logic instead of external `.css` files. Background layers are dynamically recalculated based on the screen (`linear-gradient` & `clamp()` functions).
+
+### 2. Smart Order Engine & Real-Time Validation (`SiparisFormu.jsx`)
+The order form is the layer possessing the most intensive business logic of the project.
+
+* **A) Controlled Form Management (`useForm`):**
+  * We manage form data using the Uncontrolled Component performance of the `react-hook-form` library, instead of classic DOM manipulation.
+  * The form validation mode is structured as `mode: "onChange"`. Every time the user types on the keyboard or clicks on an ingredient, the `isValid` state is calculated instantly, and the order button becomes active/passive (`disabled`) based on this status.
+
+* **B) Ingredient Selection & Boundary Protection Algorithm (Edge-Case Handling):**
+  * **Rule:** The user must select at least 4 and at most 10 additional ingredients.
+  * **Working Logic:** The user's selection array is constantly listened to via the `watch("malzemeler")` method. If the user reaches exactly 10 ingredients, the `<input type="checkbox" />` element of the 11th ingredient on the screen is instantly locked with the following logical control:
+    ```jsx
+    disabled={seciliMalzemeler.length >= 10 && !seciliMalzemeler.includes(malzeme)}
+    ```
+    In this way, the possibility of the user sending erroneous data is blocked at the interface level.
+
+* **C) Dynamic Price Calculation Engine (State Derivation):**
+  As ingredients are selected or the pizza quantity is changed, the price is mathematically generated anew. Instead of triggering an extra `useEffect` and reducing performance, a direct state derivation principle is applied:
+  $$\text{Total Amount} = (\text{Base Price} + (\text{Number of Selected Ingredients} \times 5₺)) \times \text{Quantity}$$
+
+### 3. Asynchronous API Communication and Network Security (`onSubmit`)
+* **What Does the User Experience?** The moment the form is fully filled out and the "SİPARİŞ VER" button is pressed, the payload is prepared, transmitted to the server, and the user is instantly moved to the confirmation screen.
+* **Which Functions Run in the Background?**
+  * **Payload Packaging:** The scattered form data in the interface is consolidated into a single object under the standard JSON schema (`payload`) expected by the backend service.
+  * **HTTP POST & Header Security:** While sending a request to the `https://reqres.in/api/pizza` endpoint using the `axios.post()` method, the authorization header (`x-api-key`) required by the API is securely transmitted in the `headers` block.
+  * **Stateful Routing:** The moment a `201 Created` response is received from the server, the user is redirected to the confirmation page using the `history.push({ pathname: "/Onay", state: { siparisBasarili: true } })` method. The data is securely carried inside the browser's history state (`Router State`) without cluttering the URL.
+
+### 4. Success Screen & React 18 Strict Mode Protection (`SiparisOnayi.jsx`)
+* **Which Functions Run in the Background?**
+  * **Race-Condition Protection (`useRef`):** In the React 18 development environment, `useEffect` hooks run twice (double-mount). To prevent the Toast notification from triggering twice on the screen when the page opens, a `useRef` reference named `isToasted` is used as a flag.
+  * **Memory Cleanup (`history.replace`):** Immediately after the Toast is displayed, the routing state (`state`) is cleared using `history.replace`. Thus, the user does not unnecessarily see the success notification again when they refresh the page (`F5`).
+
+---
+
+## 🧪 End-to-End (E2E) Quality and Cypress Test Engineering
+
+The reliability of a frontend project is measured by the automated tests written for it. In this project, instead of fragile CSS classes or IDs, elements are captured using the industry-standard isolated `data-cy` attributes.
+
+### Featured Cypress Scenarios:
+* **Network Interception:** Using the `cy.intercept('POST', '.../api/pizza').as('siparisGonder')` method, the HTTP request sent by a real user during order placement is captured in mid-air. It mathematically proves that the status code of the returned response is exactly `201 Created`.
+* **Negative Validation Tests:** Tests that the submit button remains `be.disabled` (unclickable) when the name field is entered with fewer than 5 characters or when fewer than 4 ingredients are selected.
+* **Boundary Testing:** Exactly 10 ingredients are selected via a loop (`forEach`), and it is verified that the 11th ingredient is automatically locked (`should('be.disabled')`).
+
+---
+
+## 🛠️ Tech Stack
+
+| Library / Tool | Version | Purpose of Use |
+| :--- | :--- | :--- |
+| **React** | `v18.x` | Component-based modular UI and Virtual DOM performance |
+| **Vite** | `v5.x` | ES-Module based super-fast bundling and HMR (Hot Module Replacement) |
+| **Styled-Components** | `v6.x` | CSS-in-JS approach, centralized theming with `ThemeProvider`, and `GlobalStyles` reset |
+| **React-Hook-Form** | `v7.x` | Performance-optimized form validation engine minimizing re-renders |
+| **React-Router-Dom** | `v5.x` | Dynamic state transfer between pages and seamless SPA navigation |
+| **Axios** | `v1.x` | HTTP client, API requests, and Header management |
+| **React-Toastify** | `v9.x` | Real-time notification animations for asynchronous operations |
+| **Cypress** | `v13.x` | End-to-end (E2E) form, counter, navigation, and network test automation |
+
+---
+
+## 🚀 Local Installation and Test Run Guide
+
+You can follow the command-line steps below to run the project on your local machine and inspect the architecture:
+
+```bash
+# 1. Clone the project repository to your local machine
+git clone [https://github.com/](https://github.com/)[YOUR_USERNAME]/teknolojik-yemekler.git
+
+# 2. Navigate into the project directory
+cd teknolojik-yemekler
+
+# 3. Install the required Node.js packages
+npm install
+
+# 4. Start the development server
 npm run dev
