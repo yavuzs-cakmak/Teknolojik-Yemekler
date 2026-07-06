@@ -1,5 +1,6 @@
 # 🍕 Teknolojik Yemekler — E2E Testli & Dinamik Geliştiriciler için Yemek Sipariş Platformu
 
+**Hey Sen**, bilgisayar başında karnı acıkan yazılım geliştirici! **Karnın mı Acıktı?** O zamannn ne duruyorsun? Pizza siparişini bu websitesinden verebilirsin!  
 **Teknolojik Yemekler**, modern frontend mimarisi prensipleriyle tasarlanmış, kullanıcı davranışlarına anlık tepki veren, uçtan uca test edilmiş (**E2E Cypress**) ve yüksek performanslı bir **React Single Page Application (SPA)** projesidir.
 
 Bu proje yalnızca bir e-ticaret arayüzü sunmakla kalmaz; form durum yönetiminden (**State Management**), asenkron API iletişimine, **Edge-Case** (sınır durumu) korumalarından, **React 18 Strict Mode** yarış koşullarının (`Race Conditions`) engellenmesine kadar derin bir frontend mühendisliği barındırır.
@@ -13,8 +14,8 @@ Bu proje yalnızca bir e-ticaret arayüzü sunmakla kalmaz; form durum yönetimi
 
 ---
 
-```markdown
 ## Temsili Veri Akış Diyagramları
+
 ### Routes
 
 ```mermaid
