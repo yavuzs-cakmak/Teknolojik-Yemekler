@@ -14,7 +14,8 @@ Bu proje yalnızca bir e-ticaret arayüzü sunmakla kalmaz; form durum yönetimi
 ---
 
 ```markdown
-### 🔄 1. Uygulama Sayfa Rotaları (Gezinti Akışı)
+## Temsili Veri Akış Diyagramları
+### Routes
 
 ```mermaid
 graph LR
@@ -23,7 +24,7 @@ graph LR
     C --> Z((Sipariş Onayı))
 ```
 
-### 🧠 2. Sipariş Formu Veri Akışı ve Validasyon Motoru
+### Sipariş Formu Veri Akışı ve Validasyon Motoru
 
 ```mermaid
 graph TB
@@ -44,7 +45,7 @@ graph TB
     I -- true --> C[Enable Submit]
     
     B --> Z((Submit))
-    C --> Z
+    C --> Z ```
 
 ---
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
