@@ -56,10 +56,10 @@ graph TB
 Uygulama, sadece standart cihazlar için değil; en dar ekranlı mobil cihazlardan (örn: 320px iPhone SE) geniş ekranlı tablet ve masaüstü monitörlere kadar **her kırılma noktasında (Breakpoint) piksel kusursuzluğu** hedeflenerek tasarlanmıştır.
 
 ### Mobil Tasarımda Uygulanan Mühendislik Çözümleri:
-* **📐 Akışkan Tipografi ve Esnek Boyutlandırma (`clamp()` & `vw/vh`)** *
-* **🔀 Dinamik Grid ve Flexbox Dönüşümleri** *
-* **🎨 Responsive Arka Plan Katmanları (`Gradient Masking`)** *
-* 
+* **📐 Akışkan Tipografi ve Esnek Boyutlandırma (`clamp()` & `vw/vh`)** 
+* **🔀 Dinamik Grid ve Flexbox Dönüşümleri** 
+* **🎨 Responsive Arka Plan Katmanları (`Gradient Masking`)** 
+  
 ---
 
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
