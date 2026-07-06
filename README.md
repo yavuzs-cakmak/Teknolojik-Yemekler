@@ -62,7 +62,8 @@ Uygulama, sadece standart cihazlar için değil; en dar ekranlı mobil cihazlard
   
 ---
 ## 📸 Uygulama Önizlemeleri (Web Sitesinin Kullanıcı Arayüzü Görüntüleri)
-
+### Anasayfa
+<img width="1536" height="694" alt="Image" src="https://github.com/user-attachments/assets/e0abcc75-0296-4c5a-8bc9-fc0c96a46579" />
 ---
 
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
