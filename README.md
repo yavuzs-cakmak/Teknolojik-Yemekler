@@ -51,7 +51,6 @@ graph TB
 ```
 
 ---
-
 ## 📱 Her Ekran ve Telefon Boyutu İçin %100 Responsive Mimari
 
 Uygulama, sadece standart cihazlar için değil; en dar ekranlı mobil cihazlardan (örn: 320px iPhone SE) geniş ekranlı tablet ve masaüstü monitörlere kadar **her kırılma noktasında (Breakpoint) piksel kusursuzluğu** hedeflenerek tasarlanmıştır.
@@ -61,6 +60,9 @@ Uygulama, sadece standart cihazlar için değil; en dar ekranlı mobil cihazlard
 * **🔀 Dinamik Grid ve Flexbox Dönüşümleri** 
 * **🎨 Responsive Arka Plan Katmanları (`Gradient Masking`)** 
   
+---
+## 📸 Uygulama Önizlemeleri (Web Sitesinin Kullanıcı Arayüzü Görüntüleri)
+
 ---
 
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
@@ -213,6 +215,10 @@ The application is designed targeting pixel perfection at every breakpoint, not 
 * **📐 Fluid Typography and Flexible Sizing:** Implemented using `clamp()` and `vw/vh` units.
 * **🔀 Dynamic Grid and Flexbox Transformations:** Seamless structure shifts across viewport sizes.
 * **🎨 Responsive Background Layers:** Utilizes gradient masking techniques for optimal visual contrast.
+
+---
+
+## 📸 Application Previews (Website User Interface Images)
 
 ---
 
