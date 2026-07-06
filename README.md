@@ -1,4 +1,4 @@
-#TR
+# TR
 # 🍕 Teknolojik Yemekler —  Yazılım Geliştiriciler için Yemek Sipariş Platformu ( E2E Testli & Dinamik )
 
 **Hey Sen**, bilgisayar başında karnı acıkan yazılım geliştirici! **Karnın mı Acıktı?** O zamannn ne duruyorsun? Pizza siparişini bu websitesinden verebilirsin!  
@@ -148,11 +148,11 @@ npm install
 
 # 4. Geliştirme sunucusunu başlatın
 npm run dev
-
+```
 
 ---
 
-#EN
+# EN
 
 # 🍕 Teknolojik Yemekler — E2E Tested & Dynamic Food Ordering Platform for Software Developers
 
