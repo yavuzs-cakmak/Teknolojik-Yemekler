@@ -13,26 +13,38 @@ Bu proje yalnızca bir e-ticaret arayüzü sunmakla kalmaz; form durum yönetimi
 
 ---
 
-# Temsili Veri Akış Diagramları
-## Routes
+```markdown
+### 🔄 1. Uygulama Sayfa Rotaları (Gezinti Akışı)
 
+```mermaid
 graph LR
-A((Anasayfa)) -->B([Sipariş Ver Butonu]) --> C[Sipariş Formu] -->Z((Sipariş Onayı))
+    A((Anasayfa)) --> B([Sipariş Ver Butonu])
+    B --> C[Sipariş Formu]
+    C --> Z((Sipariş Onayı))
+```
 
-## Sipariş Formu Veri Akışı
+### 🧠 2. Sipariş Formu Veri Akışı ve Validasyon Motoru
 
+```mermaid
 graph TB
-A((User Event)) --e.target.data--> V{does Field has errors?}
-A--e.target.data-->G[Update Form State]-->F[(Form Data State)]
-V--has error-->H[Add Error]
-V--no error-->S[Remove Error]
-H-->E[(Form Errors State)]
-S-->E
-F--->I
-E--> I{is Form valid?}
-Z((Submit))
-I--false-->B[Disable Submit]-->Z
-I--true-->C[Enable Submit]-->Z
+    A((User Event)) -- e.target.data --> V{does Field has errors?}
+    A -- e.target.data --> G[Update Form State]
+    G --> F[(Form Data State)]
+    
+    V -- has error --> H[Add Error]
+    V -- no error --> S[Remove Error]
+    
+    H --> E[(Form Errors State)]
+    S --> E
+    
+    F ---> I
+    E --> I{is Form valid?}
+    
+    I -- false --> B[Disable Submit]
+    I -- true --> C[Enable Submit]
+    
+    B --> Z((Submit))
+    C --> Z
 
 ---
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
