@@ -1,5 +1,4 @@
 import React from 'react';
-import logoSvg from '../../images/iteration-1-images/logo.svg';
 import styled from 'styled-components';
 import { useHistory,Link } from 'react-router-dom';
  const Topside = styled.header`
@@ -66,7 +65,7 @@ function Header(){
     return(
         <Topside>
         <HeaderContainerWrapper>
-    <LogoImage src={logoSvg} alt="Teknolojik Yemekler" />
+    <LogoImage src="/images/iteration-1-images/logo.svg" alt="Teknolojik Yemekler" />
     {gecerliYol==="/PizzaSiparisi" &&(
     <Breadcrumb>
     <ExtinctLink to="/"> Anasayfa </ExtinctLink>

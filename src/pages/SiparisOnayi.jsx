@@ -2,7 +2,7 @@ import { toast } from "react-toastify";
 import { useHistory,Link } from "react-router-dom";
 import React,{ useEffect,useRef } from "react";
 import styled from "styled-components";
-import logoSvg from '../../images/iteration-1-images/logo.svg';
+
 const SuccessPageContainer = styled.main`
 min-height: 100vh;
 width: 100%;
@@ -60,7 +60,7 @@ function SiparisOnayi(){
     },[history]);
 return(
     <SuccessPageContainer>
-    <SuccessLogo src={logoSvg} alt="Teknolojik Yemekler" />
+    <SuccessLogo src="/images/iteration-1-images/logo.svg" alt="Teknolojik Yemekler" />
 <SuccessTitle>TEBRİKLER! 
   <span>SİPARİŞİNİZ <br /> ALINDI!</span></SuccessTitle>
 </SuccessPageContainer>
