@@ -62,8 +62,20 @@ Uygulama, sadece standart cihazlar için değil; en dar ekranlı mobil cihazlard
   
 ---
 ## 📸 Uygulama Önizlemeleri (Web Sitesinin Kullanıcı Arayüzü Görüntüleri)
-### Anasayfa
+### 1. Anasayfa
 <img width="1536" height="694" alt="Image" src="https://github.com/user-attachments/assets/e0abcc75-0296-4c5a-8bc9-fc0c96a46579" />
+---
+### 2. Sipariş Formunda Boyut ve Hamur Kalınlığı Seçme
+<img width="1536" height="690" alt="Image" src="https://github.com/user-attachments/assets/c9f72fbb-3223-49ba-a4d9-f66c42190bee" />
+---
+### 3. Sipariş Formunda Malzeme, Ad-Soyad ve Not Input Alanı
+<img width="1536" height="689" alt="Image" src="https://github.com/user-attachments/assets/8802f727-0b80-4707-be08-298229963860" />
+---
+### 4. Sipariş Sayısı Belirleme ve Siparişi Ver Butonu
+<img width="1532" height="693" alt="Image" src="https://github.com/user-attachments/assets/75c3b7fc-2af3-4b35-8986-da1b915f2c0d" />
+---
+### 5. Sipariş Onay Sayfası
+<img width="1536" height="691" alt="Image" src="https://github.com/user-attachments/assets/08d76026-3908-45f6-a109-883a890d15db" />
 ---
 
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
@@ -220,7 +232,20 @@ The application is designed targeting pixel perfection at every breakpoint, not 
 ---
 
 ## 📸 Application Previews (Website User Interface Images)
-
+### 1. Homepage
+<img width="1536" height="694" alt="Homepage Preview" src="https://github.com/user-attachments/assets/e0abcc75-0296-4c5a-8bc9-fc0c96a46579" />
+---
+### 2. Selecting Size and Crust Thickness in the Order Form
+<img width="1536" height="690" alt="Size and Crust Selection Preview" src="https://github.com/user-attachments/assets/c9f72fbb-3223-49ba-a4d9-f66c42190bee" />
+---
+### 3. Ingredient, Name-Surname, and Note Input Fields in the Order Form
+<img width="1536" height="689" alt="Ingredients and Input Fields Preview" src="https://github.com/user-attachments/assets/8802f727-0b80-4707-be08-298229963860" />
+---
+### 4. Determining the Order Quantity and the Submit Button
+<img width="1532" height="693" alt="Quantity Selection and Submit Button Preview" src="https://github.com/user-attachments/assets/75c3b7fc-2af3-4b35-8986-da1b915f2c0d" />
+---
+### 5. Order Confirmation Page
+<img width="1536" height="691" alt="Order Confirmation Page Preview" src="https://github.com/user-attachments/assets/08d76026-3908-45f6-a109-883a890d15db" />
 ---
 
 ## 🏗️ Architectural Philosophy and User Experience (Deep Dive)
