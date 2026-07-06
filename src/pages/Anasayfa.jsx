@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 import React from "react";
 import styled from "styled-components";
+import logoSvg from '../../images/iteration-1-images/logo.svg';
 
 const HomeBackground = styled.div`
 width: 100%;
@@ -97,7 +98,7 @@ function Anasayfa(){
     };
 return(
     <HomeBackground>
-    <Logo src="/images/iteration-1-images/logo.svg" 
+    <Logo src={logoSvg}
         alt="Teknolojik Yemekler Logosu" /> 
         
     <MainTitle>
