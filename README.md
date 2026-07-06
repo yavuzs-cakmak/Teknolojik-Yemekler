@@ -1,7 +1,7 @@
 # 🍕 Teknolojik Yemekler — E2E Testli & Dinamik Geliştiriciler için Yemek Sipariş Platformu
 
 **Hey Sen**, bilgisayar başında karnı acıkan yazılım geliştirici! **Karnın mı Acıktı?** O zamannn ne duruyorsun? Pizza siparişini bu websitesinden verebilirsin!  
-**Teknolojik Yemekler**, modern frontend mimarisi prensipleriyle tasarlanmış, kullanıcı davranışlarına anlık tepki veren, uçtan uca test edilmiş (**E2E Cypress**) ve yüksek performanslı bir **React Single Page Application (SPA)** projesidir.
+**Teknolojik Yemekler**, modern frontend mimarisi prensipleriyle tasarlanmış, **en dar telefon ekranından masaüstüne kadar kusursuz responsive deneyim sunan**, kullanıcı davranışlarına anlık tepki veren, uçtan uca test edilmiş (**E2E Cypress**) ve yüksek performanslı bir **React Single Page Application (SPA)** projesidir.
 
 Bu proje yalnızca bir e-ticaret arayüzü sunmakla kalmaz; form durum yönetiminden (**State Management**), asenkron API iletişimine, **Edge-Case** (sınır durumu) korumalarından, **React 18 Strict Mode** yarış koşullarının (`Race Conditions`) engellenmesine kadar derin bir frontend mühendisliği barındırır.
 
@@ -50,6 +50,18 @@ graph TB
 ```
 
 ---
+
+## 📱 Her Ekran ve Telefon Boyutu İçin %100 Responsive Mimari
+
+Uygulama, sadece standart cihazlar için değil; en dar ekranlı mobil cihazlardan (örn: 320px iPhone SE) geniş ekranlı tablet ve masaüstü monitörlere kadar **her kırılma noktasında (Breakpoint) piksel kusursuzluğu** hedeflenerek tasarlanmıştır.
+
+### Mobil Tasarımda Uygulanan Mühendislik Çözümleri:
+* **📐 Akışkan Tipografi ve Esnek Boyutlandırma (`clamp()` & `vw/vh`)** *
+* **🔀 Dinamik Grid ve Flexbox Dönüşümleri** *
+* **🎨 Responsive Arka Plan Katmanları (`Gradient Masking`)** *
+* 
+---
+
 ## 🏗️ Mimari Felsefe ve Kullanıcı Deneyimi (Deep Dive)
 
 Uygulama üzerinde bir kullanıcının attığı her adım, arka planda belirli React kancalarını (`Hooks`), validasyon motorlarını ve asenkron HTTP süreçlerini tetikler. İşte adım adım sistemin çalışma mekanizması:
