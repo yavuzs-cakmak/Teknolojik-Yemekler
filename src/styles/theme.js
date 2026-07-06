@@ -10,6 +10,6 @@ export const pizzaTheme = {
     barlow: "'Barlow', sans-serif",
     roboto: "'Roboto Condensed', sans-serif",
     quattro: "'Quattrocento', serif",
-    satisfy: "'Satisfy', cursive"
+    satisfy: "'Satisfy', cursive",
   }
 };

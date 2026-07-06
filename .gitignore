@@ -128,3 +128,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+# Cypress Test Çıktıları (Ekran görüntüleri ve videolar)
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Vite Derleme Çıktısı (Garantiye almak için)
+dist/
+
+# İşletim Sistemi ve Kişisel Editör Çöpleri
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
