@@ -10,7 +10,7 @@ Bu proje yalnızca bir e-ticaret arayüzü sunmakla kalmaz; form durum yönetimi
 
 ## 🌐 Canlı Demo & Otomatik Test Raporları
 
-* 🚀 **Canlı Uygulama (Live Demo):** [https://teknolojik-yemekler-senin-linkin.vercel.app](teknolojik-yemekler-oy0m1wqms-yavuzs-cakmaks-projects.vercel.app)
+* 🚀 **Canlı Uygulama (Live Demo):** [Tıkla ve Git](https://teknolojik-yemekler-oy0m1wqms-yavuzs-cakmaks-projects.vercel.app)
 * 🧪 **Test Kapsamı:** 100% Uçtan Uca Cypress Senaryoları Başarılı (Form, Navigasyon, Ağ Yakalama & Fiyat Motoru)
 
 ---
@@ -190,7 +190,7 @@ This project does not only offer an e-commerce interface; it embodies deep front
 
 ## 🌐 Live Demo & Automated Test Reports
 
-* 🚀 **Live Application (Live Demo):** [https://teknolojik-yemekler-senin-linkin.vercel.app](teknolojik-yemekler-oy0m1wqms-yavuzs-cakmaks-projects.vercel.app)
+* 🚀 **Live Application (Live Demo):** [Click and Go](https://teknolojik-yemekler-oy0m1wqms-yavuzs-cakmaks-projects.vercel.app)
 * 🧪 **Test Coverage:** 100% End-to-End Cypress Scenarios Successful (Form, Navigation, Network Interception & Price Engine)
 
 ---
